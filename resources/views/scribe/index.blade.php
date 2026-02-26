@@ -293,7 +293,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-projects">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -305,7 +305,57 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Project One&quot;,
+            &quot;owner_email&quot;: &quot;samir@example.net&quot;,
+            &quot;release_date&quot;: &quot;February 27, 2026&quot;,
+            &quot;total_checks&quot;: 3,
+            &quot;completed_checks&quot;: 3
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;b&quot;,
+            &quot;owner_email&quot;: &quot;zbailey@example.net&quot;,
+            &quot;release_date&quot;: &quot;February 26, 2026&quot;,
+            &quot;total_checks&quot;: 0,
+            &quot;completed_checks&quot;: 0
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;b&quot;,
+            &quot;owner_email&quot;: &quot;zbailey@example.net&quot;,
+            &quot;release_date&quot;: &quot;February 26, 2026&quot;,
+            &quot;total_checks&quot;: 0,
+            &quot;completed_checks&quot;: 0
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;b&quot;,
+            &quot;owner_email&quot;: &quot;zbailey@example.net&quot;,
+            &quot;release_date&quot;: &quot;February 26, 2026&quot;,
+            &quot;total_checks&quot;: 0,
+            &quot;completed_checks&quot;: 0
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;name&quot;: &quot;b&quot;,
+            &quot;owner_email&quot;: &quot;zbailey@example.net&quot;,
+            &quot;release_date&quot;: &quot;February 26, 2026&quot;,
+            &quot;total_checks&quot;: 0,
+            &quot;completed_checks&quot;: 0
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;name&quot;: &quot;bgfhgfh&quot;,
+            &quot;owner_email&quot;: &quot;zbailey@example.net&quot;,
+            &quot;release_date&quot;: &quot;February 26, 2026&quot;,
+            &quot;total_checks&quot;: 4,
+            &quot;completed_checks&quot;: 3
+        }
+    ]
 }</code>
  </pre>
     </span>
@@ -401,7 +451,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --data "{
     \"name\": \"b\",
     \"owner_email\": \"zbailey@example.net\",
-    \"release_date\": \"2026-02-26T07:46:30\"
+    \"release_date\": \"2026-02-26T07:57:10\"
 }"
 </code></pre></div>
 
@@ -419,7 +469,7 @@ const headers = {
 let body = {
     "name": "b",
     "owner_email": "zbailey@example.net",
-    "release_date": "2026-02-26T07:46:30"
+    "release_date": "2026-02-26T07:57:10"
 };
 
 fetch(url, {
@@ -535,10 +585,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="release_date"                data-endpoint="POSTapi-projects"
-               value="2026-02-26T07:46:30"
+               value="2026-02-26T07:57:10"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2026-02-26T07:46:30</code></p>
+<p>Must be a valid date. Example: <code>2026-02-26T07:57:10</code></p>
         </div>
         </form>
 
@@ -596,8 +646,8 @@ access-control-allow-origin: *
     &quot;data&quot;: {
         &quot;project&quot;: &quot;Project One&quot;,
         &quot;total_checks&quot;: 3,
-        &quot;completed_checks&quot;: 2,
-        &quot;is_ready_for_deployment&quot;: false
+        &quot;completed_checks&quot;: 3,
+        &quot;is_ready_for_deployment&quot;: true
     }
 }</code>
  </pre>
