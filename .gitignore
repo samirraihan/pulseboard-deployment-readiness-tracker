@@ -24,3 +24,5 @@ Homestead.yaml
 Thumbs.db
 composer.lock
 /mysql_data
+/.scribe/*
+/public/vendor/scribe
